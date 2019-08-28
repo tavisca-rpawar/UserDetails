@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import UserList from "./userList.jsx";
 import UserData from "./userData.jsx";
+import Header from "./common/header.jsx";
+
 class App extends React.Component {
     constructor() {
         super();
@@ -46,6 +48,7 @@ class App extends React.Component {
     }
     render() {
         return (<div className="main">
+            <Header/>
             <UserList usersList={this.state.arr} funcSelectedList={this.selectedList.bind(this)} />
             <UserData user={this.state.selected} funcUpdateDetail={this.updateUserDetails.bind(this)} />
         </div>);
