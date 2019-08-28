@@ -35,11 +35,19 @@ class App extends React.Component {
             selected: this.state.arr[id - 1]
         });
     }
+    updateUserDetails(fname, lname) {
+        let updated = this.state.arr;
+        let selected = this.state.selected.id -1;
+        updated[selected].firstName = fname;
+        updated[selected].lastName = lname;
+        this.setState({
+            arr: updated
+        })
+    }
     render() {
         return (<div className="main">
             <UserList usersList={this.state.arr} funcSelectedList={this.selectedList.bind(this)} />
-            <UserData user={this.state.selected} />
-
+            <UserData user={this.state.selected} funcUpdateDetail={this.updateUserDetails.bind(this)} />
         </div>);
     }
 }

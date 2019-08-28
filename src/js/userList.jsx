@@ -5,7 +5,7 @@ class UserList extends React.Component {
     render() {
         const { usersList } = this.props;
         return (
-            <div className="Lists">
+            <span className="Lists">
                 <ul>
                     {usersList.map((data) => {
                         return (
@@ -13,7 +13,7 @@ class UserList extends React.Component {
                         )
                     })}
                 </ul>
-            </div>);
+            </span>);
     }
 }
 module.exports = UserList;
