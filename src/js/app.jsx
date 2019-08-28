@@ -37,7 +37,7 @@ class App extends React.Component {
     }
     updateUserDetails(fname, lname) {
         let updated = this.state.arr;
-        let selected = this.state.selected.id -1;
+        let selected = this.state.selected.id - 1;
         updated[selected].firstName = fname;
         updated[selected].lastName = lname;
         this.setState({
