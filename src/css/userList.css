@@ -1,0 +1,17 @@
+.Lists li {
+    color: lightseagreen;
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 20px;
+    
+}
+.Details input {
+    
+}
+.Details button{
+    background:lightseagreen;
+    border: 0;
+    padding: 0.5% 2% 0.5% 2%;
+    color: white;
+
+}
